@@ -21,6 +21,9 @@ public class test : MonoBehaviour
     public float dashingPower = 2f;
     public float dashingTime = 0.2f;
     public float dashingCooldown = 2f;
+
+
+    private bool isFacingRight = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,7 @@ public class test : MonoBehaviour
         // Update is called once per frame
         void Update()
     {
+        
         if (isDashing)
         {
             return;
@@ -45,15 +49,17 @@ public class test : MonoBehaviour
  
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         direction = Input.GetAxis("Horizontal");
-        Debug.Log(isTouchingGround);
+        //Debug.Log(isTouchingGround);
 
         if (direction > 0f)
         {
             player.velocity = new Vector2(direction*speed, player.velocity.y);
+            isFacingRight = true;
         }
         else if (direction < 0f)
         {
             player.velocity = new Vector2(direction * speed, player.velocity.y);
+            isFacingRight=false;
         }
         else
         {
@@ -85,5 +91,10 @@ public class test : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    public bool PlayerDirection()
+    {
+        return isFacingRight;
     }
 }
