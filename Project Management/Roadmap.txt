@@ -1,0 +1,12 @@
+1. UI / Script refinement / Level development
+- Basic menus that allow starting and quitting the game
+- Cleaning up minor bugs in scripts and arranging the code
+- Creating levels
+
+2. Menus / Checkpoints / Sprites
+- Main menu and in-game menu
+- Checkpoint system (maybe will scrap)
+- Sprite and sprite tuning
+
+3. Further refinement and tuning (6-10)
+(10-16) Support and promotion plan & Recording and arranging assets to upload
