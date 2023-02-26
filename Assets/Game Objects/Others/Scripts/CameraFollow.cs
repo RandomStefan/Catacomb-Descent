@@ -18,6 +18,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
+        followTransform = GameObject.FindGameObjectWithTag("Player").transform;
         xMin = mapBounds.bounds.min.x;
         xMax = mapBounds.bounds.max.x;
         yMin = mapBounds.bounds.min.y;

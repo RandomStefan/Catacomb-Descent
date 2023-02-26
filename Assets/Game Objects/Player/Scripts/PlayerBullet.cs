@@ -106,7 +106,13 @@ public class PlayerBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // check if the incoming gameobject has a tag that matches "Enemy"
+
+        if(collision.tag == "Enemy")
+        {
+            gameObject.SetActive(false);
+            collision.gameObject.SetActive(false);
+        }
+
 
     }
 }

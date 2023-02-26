@@ -51,6 +51,7 @@ public class Bullet : MonoBehaviour
         {
             if (CollisionTag == "Player")
             {
+                collision.GetComponent<test>().resetToCheckpoint();
                 gameObject.SetActive(false);
             }
             if (CollisionTag == "Enemy")

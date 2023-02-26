@@ -9,6 +9,7 @@ TagManager:
   - right
   - left
   - ExplosionCircle
+  - Door
   layers:
   - Default
   - TransparentFX

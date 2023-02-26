@@ -22,11 +22,16 @@ public class test : MonoBehaviour
     public float dashingTime = 0.2f;
     public float dashingCooldown = 2f;
 
-
+    public Vector3 checkpointPos;
+    public Vector3 startPos;
     private bool isFacingRight = true;
+
+    public int deathCounter=0;
     // Start is called before the first frame update
     void Start()
     {
+        startPos = new Vector3(0.0f, -3.205f, 0.0f);
+        checkpointPos = startPos;
         player = GetComponent<Rigidbody2D>();
     }
 
@@ -76,6 +81,7 @@ public class test : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
+ 
     }
     private IEnumerator Dash()
     {
@@ -96,5 +102,16 @@ public class test : MonoBehaviour
     public bool PlayerDirection()
     {
         return isFacingRight;
+    }
+
+    public void recieveCoords(Vector3 coords)
+    {
+        checkpointPos = coords;
+    }
+
+    public void resetToCheckpoint()
+    {
+        deathCounter++;
+        transform.position = checkpointPos;
     }
 }

@@ -37,6 +37,7 @@ public class EnemyBulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            other.GetComponent<test>().resetToCheckpoint();
             //other.gameObject.GetComponent<Health>().health -= 20;
             Destroy(gameObject);
         }

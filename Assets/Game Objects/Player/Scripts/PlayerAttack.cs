@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     //public Animator playerAnim;
     public float damage;
 
-    private Shake shake;
+    
     public float delay = 2;
     private float timer;
     private float explosionTimer;
@@ -71,7 +71,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        
         player = GameObject.FindGameObjectWithTag("Player");
         ExplosionCircle = GameObject.FindGameObjectWithTag("ExplosionCircle");
         ExplosionCircle.SetActive(false);
@@ -85,6 +85,10 @@ public class PlayerAttack : MonoBehaviour
         timeUntillast += Time.deltaTime;
         timer += Time.deltaTime;
         explosionTimer += Time.deltaTime;
+
+
+
+
         if (Input.GetKey(KeyCode.Q))
         {
             if (timer > delay)
@@ -107,11 +111,15 @@ public class PlayerAttack : MonoBehaviour
                 timeUntillast = 0;
                 explosionTimer = 0;
                 ExplosionCircle.SetActive(true);
+                
 
         }
        
 
-        if(timeUntillast>= explosionCircleLast)
+        if (Input.GetKey(KeyCode.R))
+            player.GetComponent<test>().resetToCheckpoint();
+
+        if (timeUntillast>= explosionCircleLast)
         {
             ExplosionCircle.SetActive(false);
         }
@@ -124,7 +132,7 @@ public class PlayerAttack : MonoBehaviour
                 //camAnim.SetTrigger("shake");
                 //playerAnim.SetTrigger("attack");
 
-                shake.CamShake();
+               
                 Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY),0, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
