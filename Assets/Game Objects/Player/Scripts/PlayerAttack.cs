@@ -154,6 +154,11 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY, 1));
     }
 
+    public void PoweUp()
+    {
+        delay = 0.5f;
+        explosionTimerDelay = 1f;
+    }
 
     IEnumerator ExecuteAfterTime(float time)
     {

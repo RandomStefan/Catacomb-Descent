@@ -24,7 +24,14 @@ public class enemytest : MonoBehaviour
         {
             dirX *= -1f;
         }
+
+        if(collision.tag == "Player")
+        {
+            collision.GetComponent<test>().resetToCheckpoint();
+        }
     }
+
+ 
 
     void FixedUpdate()
     {
