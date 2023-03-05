@@ -24,7 +24,7 @@ public class Checkpoint : MonoBehaviour
         if ((collision.tag == "Player") && (isActive  == false ))
         {
             isActive = true;
-           sprite.color = Color.yellow;
+           sprite.color = new Color32(121, 255, 176, 255);
             PlayerScript.recieveCoords(transform.position);
 
         }

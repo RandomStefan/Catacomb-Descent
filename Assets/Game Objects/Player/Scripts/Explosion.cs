@@ -25,6 +25,11 @@ public class Explosion : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
         }
+
+        if(collision.tag=="Destructible")
+        {
+            collision.gameObject.SetActive(false);
+        }
     }
 
 }

@@ -10,6 +10,7 @@ TagManager:
   - left
   - ExplosionCircle
   - Door
+  - Destructible
   layers:
   - Default
   - TransparentFX

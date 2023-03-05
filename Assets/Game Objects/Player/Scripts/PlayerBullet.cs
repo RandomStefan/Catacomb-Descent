@@ -113,6 +113,13 @@ public class PlayerBullet : MonoBehaviour
             collision.gameObject.SetActive(false);
         }
 
+        if (collision.tag == "Destructible")
+        {
+            collision.gameObject.SetActive(false);
+            gameObject.SetActive(false);
+            
+        }
+
 
     }
 }

@@ -30,7 +30,7 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startPos = new Vector3(0.0f, -3.205f, 0.0f);
+        startPos = new Vector3(-43.5f, -65.3f, 0.0f);
         checkpointPos = startPos;
         player = GetComponent<Rigidbody2D>();
     }
