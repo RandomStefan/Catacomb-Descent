@@ -1,0 +1,31 @@
+--- Audio ---
+Pulo7.mp3 by Filippys (no date) Freesound. Available at: https://freesound.org/people/filippys/sounds/656905/. 
+Explosion, 8-bit, 01.wav by Inspectorj (no date) Freesound. Available at: https://freesound.org/people/InspectorJ/sounds/448226/. 
+Jump01.wav by Jeremysykes (no date) Freesound. Available at: https://freesound.org/people/jeremysykes/sounds/341247/. 
+Whoosh / dash by Kastenfrosch (no date) Freesound. Available at: https://freesound.org/people/Kastenfrosch/sounds/521999/. 
+-------------
+
+
+--- Sprites ---
+Kenney (no date) Platformer Art Deluxe, Platformer Art Deluxe · Kenney. Available at: https://www.kenney.nl/assets/platformer-art-deluxe. 
+Kenney (no date) Platformer Pack Redux, Platformer Pack Redux · Kenney. Available at: https://www.kenney.nl/assets/platformer-pack-redux. 
+Kenney (no date) Roguelike caves &amp; dungeons, Roguelike Caves &amp; Dungeons · Kenney. Available at: https://www.kenney.nl/assets/roguelike-caves-dungeons. 
+---------------
+
+
+--- Code ---
+How to dash in unity (2022) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=2kFGmuPHiA0. 
+Unity 2D platformer tutorial 11 - jumping with ground check (2021) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=ld5QQm-ADdE. 
+Melee combat in Unity (2019) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=sPiVz1k-fEs. 
+Unity 2d platformer tutorial 9 - player movement (2021) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=1McneCNmWJo&amp;list=PLGmYIROty-5YPWeXeVnQvR9KbMIrL5cM-&amp;index=10. 
+Unity 2D platformer tutorial 12 - preventing player from sticking to edges of platforms (2021) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=rcob41f6WVQ&amp;list=PLGmYIROty-5YPWeXeVnQvR9KbMIrL5cM-&amp;index=13. 
+Unity 2D platformer tutorial 18 - making the camera follow the player (2021) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=1yHtdnyoA90&amp;list=PLGmYIROty-5YPWeXeVnQvR9KbMIrL5cM-&amp;index=19. 
+Unity 2D platformer tutorial 19 - respawning the player (2021) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=6ZmRJ_-XcQ8&amp;list=PLGmYIROty-5YPWeXeVnQvR9KbMIrL5cM-&amp;index=20. 
+Tilemap &amp; Tile Palette | build a 2D platformer game in Unity #2 (2021) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=QkbGr1rAya8&amp;t=555s. 
+Tilemap in Unity (Build Worlds easily) (2020) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=1w5VEgXBo4E&amp;t=104s. 
+Screen shake with no code - easy unity tutorial (2018) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=N24MhfeoUpE. 
+How to make 2D melee combat - easy unity tutorial (2018) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=1QfxdUpVh5I. 
+Simple shooting | 2d | bullets | unity game engine (2021) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=4KoAlJ8sPy4. 
+2d enemy shooting unity tutorial (2022) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=--u20SaCCow. 
+How to create "Bullet hell" feature with simple object pooling system in 2D game made with unity (2019) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=Mq2zYk5tW_E&amp;t=1s. 
+------------

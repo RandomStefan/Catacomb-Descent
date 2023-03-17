@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class HUDscript : MonoBehaviour
 {
     [SerializeField]
-    public TMP_Text counterText;
-    private float counter=0;
+    private TMP_Text counterText; // The actual text
+    private float counter=0; // The counter
 
     public void Update()
     {
-        counter = GameObject.FindGameObjectWithTag("Player").GetComponent<test>().deathCounter;
-        counterText.text = "Death counter: "+counter.ToString();
+        counter = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementScript>().deathCounter; // We get the counter from the player movement script
+        counterText.text = "Death counter: "+counter.ToString(); // We add it to the counter
     }
 }

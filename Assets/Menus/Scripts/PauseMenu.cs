@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public CanvasGroup gameHUD;
-    public CanvasGroup pauseMenu;
+    public CanvasGroup gameHUD; // Only death counter
+    public CanvasGroup pauseMenu; // Resume and quit buttons
     // Start is called before the first frame update
-    void Start()
+    void Start() // Set timescale to 1 at the start
     {
         Time.timeScale = 1;
     }
@@ -16,7 +16,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P)) // Show pause menu
         {
             Time.timeScale = 0f;
             CloseCanvasGroup(gameHUD);
@@ -24,14 +24,14 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void PlayGame()
+    public void PlayGame() // Resume game - pause menu
     {
         Time.timeScale = 1f;
         CloseCanvasGroup(pauseMenu);
         OpenCanvasGroup(gameHUD);
     }
 
-    public void QuitGame()
+    public void QuitGame() // Quit game to main menu
     {
         SceneManager.LoadScene(0);
     }

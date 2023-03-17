@@ -25,10 +25,6 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void Credits()
-    {
-        //SceneManager.LoadScene("Credits");
-    }
     // Start is called before the first frame update
     void Start()
     {

@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class BossMovement : MonoBehaviour
 {
-    private float dirX;
+    // Script is a combination of enemy movement script and player movement script (just the dashing method)
+    // Check those for a more detailed breakdown
+
     public float moveSpeed = 1f;
+
+    private float dirX;
+   
     private Rigidbody2D rb;
     private bool facingRight = false;
+
     private Vector3 localScale;
+
+
     [SerializeField] private TrailRenderer tr;
     private bool canDash = true;
     private bool isDashing;
@@ -26,7 +34,7 @@ public class BossMovement : MonoBehaviour
         dirX = -1f;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // If hit a wall, start dashing in the opposite direction
     {
         if (collision.GetComponent<Wall>())
         {
@@ -37,7 +45,7 @@ public class BossMovement : MonoBehaviour
 
  
 
-        void FixedUpdate()
+        void FixedUpdate() // Check if is dashing and set the velocity
     {
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
         if (isDashing)
@@ -46,12 +54,12 @@ public class BossMovement : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    void LateUpdate() // Check where to face
     {
         CheckWhereToFace();
     }
 
-    void CheckWhereToFace()
+    void CheckWhereToFace() // Check and set the player facing direction sprite included
     {
         if (dirX > 0)
         { facingRight = true; 
@@ -69,7 +77,7 @@ public class BossMovement : MonoBehaviour
 
         transform.localScale = localScale;
     }
-    private IEnumerator Dash()
+    private IEnumerator Dash() // Dashing coroutine
     {
         canDash = false;
         isDashing = true;

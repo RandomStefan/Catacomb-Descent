@@ -11,6 +11,7 @@ TagManager:
   - ExplosionCircle
   - Door
   - Destructible
+  - WallCollider
   layers:
   - Default
   - TransparentFX

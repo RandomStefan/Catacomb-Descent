@@ -4,64 +4,7 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    //private GameObject enemy;
-    //private Rigidbody2D rb;
-    //public float force;
-    //private float timer;
-    //// Start is called before the first frame update
-
-    //private void Fire()
-    //{
-    //    float angleStep = (endAngle - startAngle) / bulletsAmount;
-    //    float angle = startAngle;
-
-    //    for (int i = 0; i < bulletsAmount; i++)
-    //    {
-    //        float bulDirX = Mathf.Sin((0 * Mathf.PI) / 180f);
-    //        float bulDirY = Mathf.Cos((0 * Mathf.PI) / 180f);
-
-    //        Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
-    //        Vector2 bulDir = bulMoveVector;
-
-    //        GameObject bul = BulletPool.PlayerbulletPoolInstanse.GetBullet();
-    //        bul.transform.position = FirePosition.position;
-    //        bul.transform.rotation = FirePosition.rotation;
-    //        bul.SetActive(true);
-    //        bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
-
-    //        //Debug.Log("Bullet spawned at :" + bul.transform.position + " with rotation " + bul.transform.rotation + " .");
-
-    //        angle += angleStep;
-    //    }
-    //}
-
-    //void Start()
-    //{
-    //    rb = GetComponent<Rigidbody2D>();
-    //    enemy = GameObject.FindGameObjectWithTag("Enemy");
-
-    //    Vector3 direction = enemy.transform.position - transform.position;
-    //    rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
-
-    //    float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-    //    transform.rotation = Quaternion.Euler(0, 0, rot + 90); //sterge 90 daca e vreo problema la sprite uri
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    timer += Time.deltaTime;
-    //    if (timer > 10)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
-
-
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //}
-
+    // Zotov, A., 2020. [online] Available at: https://www.youtube.com/watch?v=Mq2zYk5tW_E&t=437s 
 
     private Vector2 moveDirection;
     public float moveSpeed;
@@ -69,27 +12,22 @@ public class PlayerBullet : MonoBehaviour
     public string CollisionTag;
 
     public Transform partSpawnSpace;
-    public GameObject bulletHitParticle;
+    // Destroy the bullet after 3 seconds as we dont need it for more at any time
     private void OnEnable()
     {
         Invoke("Destroy", 3.0f);
     }
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //moveSpeed = 5f;
-    }
-
-    // Update is called once per frame
+    // We update it's transform each frame
     void Update()
     {
-        //Debug.Log("Bullet rotation: " + transform.rotation);
+
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
-        //transform.LookAt(moveDirection);
+
     }
 
+    // We set the bullet's direction
     public void SetMoveDirection(Vector2 dir)
     {
         moveDirection = dir;
@@ -104,6 +42,11 @@ public class PlayerBullet : MonoBehaviour
     {
         CancelInvoke();
     }
+
+    // Function checks for collision with various objects 
+    // If it collides with an enemy it kills the enemy
+    // If it collides with a game object with these tags: Destructible, WallCollider it just despawns
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -118,6 +61,11 @@ public class PlayerBullet : MonoBehaviour
             collision.gameObject.SetActive(false);
             gameObject.SetActive(false);
             
+        }
+
+        if (collision.tag == "WallCollider")
+        {
+            gameObject.SetActive(false);
         }
 
 

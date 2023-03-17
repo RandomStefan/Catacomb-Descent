@@ -18,17 +18,16 @@ public class Explosion : MonoBehaviour
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // Check collision with surrounding entitites 
     {
-        Debug.Log("TRIGGER");
-        if(collision.tag=="Enemy")
+        if(collision.tag=="Enemy") // If collision happened with enemy
         {
-            collision.gameObject.SetActive(false);
+            collision.gameObject.SetActive(false); // We deactivate them
         }
 
-        if(collision.tag=="Destructible")
+        if(collision.tag=="Destructible") // If collision happened with a destructible object
         {
-            collision.gameObject.SetActive(false);
+            collision.gameObject.SetActive(false); // We deactivate them
         }
     }
 
