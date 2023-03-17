@@ -1,0 +1,6 @@
+Note: I worked on this project alone so all that can be found inside the source of the game sent for the Game Submission is my work.
+Citations can be found inside References.txt inside the same folder as this file.
+
+I have added a lot of things from the source in the "Additional" folder.
+It is not needed to check that folder if my source folder I sent for the other part of the
+assignment will be taken into consideration.
